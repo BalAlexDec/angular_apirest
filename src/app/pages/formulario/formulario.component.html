@@ -1,0 +1,23 @@
+<div id="toma-datos">
+    <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label>Id</mat-label>
+      <input matInput #id autocomplete="off" value="">
+    </mat-form-field>
+    <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>Titulo del disco</mat-label>
+        <input matInput #nombrediscos autocomplete="off" value="">
+    </mat-form-field>
+    <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>Interprete (XXX)</mat-label>
+        <input matInput #Interprete autocomplete="off" value="">
+    </mat-form-field>
+    <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>Año de publicacion</mat-label>
+        <input matInput #publicacion autocomplete="off" value="">
+    </mat-form-field>
+    <div id="Botones">
+        <button mat-raised-button (click)="insertardisco(nombrediscos.value,Interprete.value,publicacion.value)">Añadir</button>
+        <button mat-raised-button (click)="modificar(id.value,nombrediscos.value,Interprete.value,publicacion.value)">Modifcar</button>
+        <button mat-raised-button (click)="deldisco(id.value)">Eliminar</button>
+    </div>
+</div>

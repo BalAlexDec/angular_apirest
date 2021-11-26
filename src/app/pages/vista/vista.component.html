@@ -1,0 +1,15 @@
+<div id="vista">
+    <mat-form-field appearance="fill">
+        <mat-label>Codigo del disco (XXX)</mat-label>
+        <input matInput #id autocomplete="off" value="1">
+    </mat-form-field>
+    <button mat-raised-button color="primary"
+        (click)="mostrardiscos(id.value)">Buscar</button>
+    <ng-container *ngIf="mostrar">
+        <mat-list role="list">
+            <mat-list-item role="listitem">Titulo: {{ disco.titulo}}</mat-list-item>
+            <mat-list-item role="listitem">Interprete: {{ disco.interprete }}</mat-list-item>
+            <mat-list-item role="listitem">AñodePublicacion: {{ disco.anyoPublicacion }}</mat-list-item>
+        </mat-list>
+    </ng-container>
+</div>
